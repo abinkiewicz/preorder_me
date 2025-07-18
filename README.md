@@ -51,3 +51,5 @@ An intelligent assistant for generating optimized preorder lists based on manufa
   <img src="getrymilano.png" width="700" height="590">
 </p>
 
+You can explore the example notebook here: [project_template.ipynb](project_template.ipynb)
+
