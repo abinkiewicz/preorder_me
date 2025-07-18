@@ -1,14 +1,10 @@
 # 🛍️ Preorder Me
 
-An intelligent assistant for generating optimized preorder lists based on manufacturer catalogs and past sales reports. Powered by machine learning and computer vision, the app helps determine what products to order — and how many — while staying within a given budget.
+An intelligent assistant for generating optimized preorder lists based on manufacturer catalogs and past sales reports. Powered by machine learning and computer vision, the app helps determine what products and how many products while staying within a given budget.
 
 ---
 
-## 🔎 Preview
-
-<p align="center">
-  <img src="getrymilano.png" width="700" height="590">
-</p>
+## 📷 Logo
 
 <p align="center">
   <img src="logo.png" width="350" height="500">
@@ -50,4 +46,8 @@ An intelligent assistant for generating optimized preorder lists based on manufa
 - The app returns a final list of recommended products, sizes, and quantities.
 
 👉 Initial focus: forecasting preorders for Adidas football socks.
+
+<p align="center">
+  <img src="getrymilano.png" width="700" height="590">
+</p>
 
