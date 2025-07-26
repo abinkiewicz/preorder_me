@@ -67,10 +67,6 @@ Present the data in json format. Present the data itself, without additional com
 #Reading and cleaning the response
 content = response.choices[0].message.content
 match = re.search(r"\[\s*{.*?}\s*\]", content, re.DOTALL)
-
-if match:
-    print("Znaleziony fragment JSON:", match.group(0))
-
 data = json.loads(match.group(0))
 
 #Creating dataframe
