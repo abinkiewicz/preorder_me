@@ -6,7 +6,7 @@ PreorderMe v1:
 
 '''
 
-#Importy
+#Imports
 
 import json
 from pathlib import Path
@@ -18,18 +18,14 @@ import streamlit as st
 from dotenv import dotenv_values, load_dotenv
 import re
 
-#OPENAI pass - zrobić przez .env
+#OPENAI pass
 env = dotenv_values(".env")
 load_dotenv()
 
 openai_client = OpenAI(api_key=env["OPENAI_API_KEY"])
 
-#Przygotowanie obrazka
+#Image preparing
 image_path = "milano_socks.png"
-with open(image_path, "rb") as f:
-    image_data = base64.b64encode(f.read()).decode('utf-8')
-
-image_data[:100]
 
 def prepare_image_for_open_ai(image_path):
     with open(image_path, "rb") as f:
@@ -38,7 +34,7 @@ def prepare_image_for_open_ai(image_path):
     return f"data:image/png;base64,{image_data}"
 
 
-#Zapytanie do GPT
+#GPT request
 response = openai_client.chat.completions.create(
     # model="gpt-4o",
     model="gpt-4o-mini",
@@ -50,9 +46,9 @@ response = openai_client.chat.completions.create(
                 {
                     "type": "text",
                     "text": """
-Odczytaj informacie o produkcie ze zdjęcia katalogu. Potrzebuję tabelki z informacjami o tych produktach: rodzaj ubrania (np. koszulka, spodenki, buty, skarpetki), 
-kolor (z kolorów podstawowych, np. kolory tęczy, np. niebieski - nie musi być błękitny, lazurowy itd.), numer katalogowy produktu, cena.
-Dane przedstaw w formacie json. Przedstaw same dane, bez dodatkowych komentarzy.
+Read the product information from the catalog photo. I need a table with information about these products: type of clothing (e.g., T-shirt, shorts, shoes, socks), 
+color (from basic colors, e.g., rainbow colors, e.g., blue—it does not have to be sky blue, azure, etc.), product catalog number, price.
+Present the data in json format. Present the data itself, without additional comments.
 """
                 },
                 {
@@ -68,6 +64,7 @@ Dane przedstaw w formacie json. Przedstaw same dane, bez dodatkowych komentarzy.
 )
 
 
+#Reading and cleaning the response
 content = response.choices[0].message.content
 match = re.search(r"\[\s*{.*?}\s*\]", content, re.DOTALL)
 
@@ -76,6 +73,6 @@ if match:
 
 data = json.loads(match.group(0))
 
-#Tworzenie df
+#Creating dataframe
 df = pd.DataFrame(data)
 print(df)
