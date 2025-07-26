@@ -17,7 +17,7 @@ An intelligent assistant for generating optimized preorder lists based on manufa
 
 - Python 🐍  
 - Streamlit  
-- Clarifai API  
+- OpenAI API  
 - PyCaret  
 - Pulp  
 - Pandas  
@@ -33,7 +33,7 @@ An intelligent assistant for generating optimized preorder lists based on manufa
 - performing exploratory data analysis (EDA) and preprocessing  
 - optimizing shopping lists under budget constraints  
 - building an interactive Streamlit app  
-- integrating external APIs (Clarifai)  
+- integrating external APIs (OpenAI)  
 - basic ETL pipeline planning and automation  
 
 ---
