@@ -49,7 +49,7 @@ An intelligent assistant for generating optimized preorder lists based on manufa
 👉 Initial focus: forecasting preorders for adidas football socks.
 
 <p align="center">
-  <img src="getrymilano.png" width="700" height="590">
+  <img src="milano_socks.png" width="700" height="590">
 </p>
 
 
