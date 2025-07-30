@@ -13,6 +13,19 @@ An intelligent assistant for generating optimized preorder lists based on manufa
 #### You can explore the project template here: [project_template.ipynb](project_template.ipynb)
 ---
 
+## 💡 Purpose of this project
+
+The “Preorder Me” project was created to simplify the work of purchasing teams in companies that need to regularly plan and place orders based on extensive product catalogs and historical sales data. By automating catalog analysis and demand forecasting, the app helps to:
+
+- optimize preorder lists according to actual needs and available budget,
+- reduce the risk of overstocking or stockouts,
+- speed up the ordering process by eliminating manual and time-consuming tasks,
+- make data-driven purchasing decisions instead of relying on intuition.
+
+As a result, “Preorder Me” supports purchasing teams in managing inventory and budgets more efficiently, leading to cost savings and better alignment of product assortments with real demand.
+
+---
+
 ## 🛠 Technologies and tools
 
 - Python 🐍  
